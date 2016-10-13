@@ -1,0 +1,38 @@
+#  ====== PHPPO package datas yaml ======  #
+#
+## this file is made for develop plugins.
+##          made by chell_uoxou
+#
+#  ======================================  #
+#
+#
+# -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- #
+# "name" : Plugin Name
+# "path" : main php file's path
+# "main" : main class position (*namespace\extendsclass\class\class\...)
+# "version" : plugin version
+# "api" : to need api version
+# "load" : when is it readed? (default is STARTUP okay)
+# "auther" : auther
+# "authers" (optional) : many authers. (array)
+# "description" : plugin description.
+# "commands" : Commands with its plugin and permissions (array)
+# -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- # -=#=- #
+
+
+name: TestPlugin
+path: src/chell_uoxou/test.php
+main: TestPlugin\main
+version: 0.0.0
+api: 1.7.0_alpha
+load: STARTUP
+author: chell_uoxou
+description: This is a test plugin for PHPPO!
+commands:
+ test:
+  permission: test.command
+  usage: "test <args...>"
+permissions:
+ test.command:
+  default: root
+  description: "allow all command"
